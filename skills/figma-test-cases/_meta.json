@@ -1,0 +1,6 @@
+{
+  "name": "figma-test-cases",
+  "version": "1.0.0",
+  "description": "从 Figma 设计稿分析功能并生成测试用例 Excel 表格",
+  "author": "chenzixiong666-png"
+}

@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-07T10:29:04.838Z",
+  "entries": {
+    "memory:memory/2026-04-07.md:1:39": {
+      "key": "memory:memory/2026-04-07.md:1:39",
+      "path": "memory/2026-04-07.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# 2026-04-07 - 学习用例编写规范 ## 对话摘要 靓仔给了我一份 Climate Panel 固件用例表格（CSV），我通过分析这份真实用例，学到了他的测试用例编写规范。 ## 关键成果 ### 学到的用例编写核心规范 1. **用例名称** - 简洁一句话，不写步骤 - ✅ \"删除设备后再添加\" - ❌ \"点击删除→确认→重新添加\" 2. **场景分支用括号** - 在用例名称中用括号表示多个场景 - 例：`按键背光（背光区域检查）` - 例：`勿扰模式切换（不跨天情况 A<B）` 3. **步骤和预期结果必须一一对应** - 用 `#` 分割多个步骤 - 步骤数 = 预期结果数（严格对应） 4. **前置条件** - 简洁描述环境状态，可为空 5. **模块树** - 最多7级，通常用到4-5级就够了 6. **优先级判断** - P0：核心功能主流程，失败影响多个功能 - P1：功能正向业务流，使用频率高 - P2：异常场景或次要功能 - P3：边界、UI、特殊场景 ### 表格结构 用例表包含：ID、一~七级模块、用例名称、优先级、用例类型、创建时间、更新时间、前置条件、步骤描述、预期结果、备注、维护人、标签、测试点ID ## 立即可用的能力 现在我可以帮靓仔：",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.7752546297781868,
+      "maxScore": 0.8883717860515693,
+      "firstRecalledAt": "2026-04-16T12:13:44.347Z",
+      "lastRecalledAt": "2026-04-24T10:20:59.354Z",
+      "queryHashes": [
+        "d55d83a1c14d",
+        "f5941e2300d4"
+      ],
+      "recallDays": [
+        "2026-04-16",
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "通常用到4-5级就够了",
+        "学习",
+        "用例",
+        "编写",
+        "规范",
+        "对话",
+        "摘要",
+        "一份"
+      ]
+    },
+    "memory:memory/2026-04-13.md:161:192": {
+      "key": "memory:memory/2026-04-13.md:161:192",
+      "path": "memory/2026-04-13.md",
+      "startLine": 161,
+      "endLine": 192,
+      "source": "memory",
+      "snippet": "- 选项：GitHub Raw、imgur、Cloudinary、或其他公开图床 - 或者：用飞书的文件分享功能生成公开链接 ### ✅ 本地照片成功上传至画框（14:13） **最终方案**：用 Base64 直接编码图片数据，SwitchBot API 原生支持 `imageBase64` 参数 **执行过程**： 1. ✅ 发现 SwitchBot API 支持 `{\"imageBase64\":\"<base64数据>\"}` 参数格式 2. ✅ 读取本地图片文件，转换为 Base64 编码（183,080 字符） 3. ✅ 调用 SwitchBot API 三次，分别上传到三个画框 **上传结果** 🎉： - ✅ 画框 77 (B0E9FE7A1A77)：statusCode 100, success - ✅ 画框 A7 (B0E9FEB3F9A7)：statusCode 100, success - ✅ 画框 80 (B0E9FEA8B080)：statusCode 100, success - ⏭️ 画框 7B (B0E9FE74647B)：跳过（已知硬件故障） **关键发现**：SwitchBot AI Art Frame 既支持 URL 方式（`imageUrl`）也支持 Base64 方式（`imageBase64`），无需外部图床或 URL 托管。 ### ✅ 画框 7B 重新上传成功（14:21） **过程**： - 用同样的 Base64 方法重新尝试上传到 7B - 这次成功！statusCode 100, success **最终结果",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8788123282767178,
+      "maxScore": 0.8788123282767178,
+      "firstRecalledAt": "2026-04-16T12:13:44.347Z",
+      "lastRecalledAt": "2026-04-16T12:13:44.347Z",
+      "queryHashes": [
+        "d55d83a1c14d"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "选项",
+        "github",
+        "raw",
+        "imgur",
+        "cloudinary",
+        "其他",
+        "公开",
+        "或者"
+      ]
+    },
+    "memory:memory/2026-04-13.md:184:195": {
+      "key": "memory:memory/2026-04-13.md:184:195",
+      "path": "memory/2026-04-13.md",
+      "startLine": 184,
+      "endLine": 195,
+      "source": "memory",
+      "snippet": "- 用同样的 Base64 方法重新尝试上传到 7B - 这次成功！statusCode 100, success **最终结果** 🎉🎉🎉： - ✅ 画框 7B (B0E9FE74647B)：statusCode 100, success - ✅ 画框 77 (B0E9FE7A1A77)：statusCode 100, success - ✅ 画框 A7 (B0E9FEB3F9A7)：statusCode 100, success - ✅ 画框 80 (B0E9FEA8B080)：statusCode 100, success **所有 4 个相框设备已成功显示用户照片！** 之前的故障可能是因为用了 URL 方式，Base64 方式则工作正常。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8781400501885942,
+      "maxScore": 0.8781400501885942,
+      "firstRecalledAt": "2026-04-16T12:13:44.347Z",
+      "lastRecalledAt": "2026-04-16T12:13:44.347Z",
+      "queryHashes": [
+        "d55d83a1c14d"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "同样",
+        "base64",
+        "方法",
+        "重新",
+        "尝试",
+        "这次",
+        "成功",
+        "statuscode"
+      ]
+    },
+    "memory:memory/2026-03-23.md:1:29": {
+      "key": "memory:memory/2026-03-23.md:1:29",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-03-23 工作记录 ## 项目：日程分段功能测试用例编写 ### 任务完成 ✅ 为用户创建了完整的日程分段功能测试用例，共**29条**，优先级分布： - P0（核心功能）：16条 - P1（重要功能）：13条 ### 模块分布 1. **分段数量管理** (6条) - 验证1-12段范围、默认值、升级数据保留 2. **新增日程** (5条) - 新增位置、时间自动调整、分段上限 3. **删除日程** (6条) - 删除中间/首尾日程、时间调整、下限保护 4. **编辑日程** (6条) - 修改时间、新建时间段、温度默认值(18℃) 5. **跨设备复制** (5条) - V18固件版本限制、数据完整性、覆盖处理 ### 交付物 1. **飞书文档版本** - https://feishu.cn/docx/RhIPdUPQGogAQ2xVA1XcP5Uhn1e - 清晰的列表格式，包含详细的前置条件、步骤、预期结果 2. **飞书表格版本**（推荐） - https://ihqz5dyhwa.feishu.cn/base/J6E6b7q1WaTW9gsfmlfcgQr3nmc - 31条记录（包含最早添加的2条） - 支持筛选、排序、多人协作 - 字段：测试用例ID、所属模块、测试描述、前置条件、测试步骤、预期结果、优先级 3. **CSV数据文件** - test_cases.csv (本地工作区) - 便于导入Excel或其他工具 ### 关键需求点总结",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.708414867694542,
+      "maxScore": 0.8708522299455053,
+      "firstRecalledAt": "2026-04-24T10:05:49.801Z",
+      "lastRecalledAt": "2026-04-24T10:20:59.354Z",
+      "queryHashes": [
+        "08ee4c519145",
+        "f5941e2300d4"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "验证1-12段范围",
+        "删除中间/首尾日程",
+        "test-cases.csv",
+        "工作",
+        "记录",
+        "项目",
+        "日程",
+        "分段"
+      ]
+    },
+    "memory:memory/2026-04-13.md:134:168": {
+      "key": "memory:memory/2026-04-13.md:134:168",
+      "path": "memory/2026-04-13.md",
+      "startLine": 134,
+      "endLine": 168,
+      "source": "memory",
+      "snippet": "- 风险：需确认 SwitchBot API 是否支持 Base64 格式 **当前状态**：用户已确认拥有本地照片，等待确认上传方案 **可用画框**（排除 7B）： - 77 (B0E9FE7A1A77) ✅ - A7 (B0E9FEB3F9A7) ✅ - 80 (B0E9FEA8B080) ✅ ### 📸 本地照片上传执行中（12:32-12:41） **进度**： 1. ✅ 本地照片已读取（fb6d278a-6db8-4d93-808b-1a4027e04f1a.jpg，137310 字节） 2. ✅ 转换成 Base64（183,080 字符） 3. ✅ 上传到飞书文档 KalkdzwOEog8HRxNIZlc7q2vn3d 4. ✅ 飞书返回文件 Token: VNmNbekxQoquyyxwas2cvVrOngf 5. ❌ 尝试用飞书 URL 上传到画框失败 - 飞书 URL: `https://ihqz5dyhwa.feishu.cn/file/VNmNbekxQoquyyxwas2cvVrOngf` - 错误：`internal server error`（可能是 URL 无法被设备访问或需要身份认证） **问题分析**： - SwitchBot 设备需要可公开访问的 HTTP URL - 飞书的 URL 可能需要身份验证，或设备无法访问内网/受限 URL - 参数格式已验证正确（用 Pexels URL 测试成功） **下一步方案**： - 需要获取一个完全公开且无需认证的 URL - 选项：GitHub Raw、imgur、C",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8648736882958747,
+      "maxScore": 0.8648736882958747,
+      "firstRecalledAt": "2026-04-24T10:20:40.876Z",
+      "lastRecalledAt": "2026-04-24T10:20:40.876Z",
+      "queryHashes": [
+        "540ac543bbfc"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "32-12",
+        "或设备无法访问内网/受限",
+        "风险",
+        "确认",
+        "switchbot",
+        "api",
+        "是否",
+        "支持"
+      ]
+    },
+    "memory:memory/2026-03-23.md:46:76": {
+      "key": "memory:memory/2026-03-23.md:46:76",
+      "path": "memory/2026-03-23.md",
+      "startLine": 46,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "## 后续工作（15:18 - 15:25） ### 权限问题跟进 - 用户要求重新设置编辑、分享权限 - 飞书表格已创建，用户理论上拥有编辑权限 - 提供了两种权限设置方案： 1. 用户自行在飞书UI中调整（通过\"分享\"按钮） 2. 重新创建新表格以确保权限正确 ### 技术确认 - ✅ 应用拥有48项权限许可（包含docs权限和bitable权限） - ✅ 权限scope包括：`docs:permission.member:create`、`docs:permission.setting:write_only`等 - ⚠️ Bitable权限管理与Doc文档略有差异，需在飞书UI中手动设置分享范围 ### 当前状态 - 表格创建时已自动赋予创建者（requester_open_id）编辑权限 - 用户ou_9c8d825e05f86d5b1794dea7e7a30a36需确认权限范围是否满足需求 ## 权限解决方案实施（15:25 - 15:40） ### 问题处理 - 用户反映没有权限访问/编辑第一个表格 - 决定重新创建新表格以确保权限完全正确 ### 新表格创建完成 ✅ **新表格链接**：https://ihqz5dyhwa.feishu.cn/base/IpAtbylrvaJBOBsFSqMcBcaYnpd - app_token: IpAtbylrvaJBOBsFSqMcBcaYnpd - table_id: tblTXGTw5hzGQGh4 ### 完整的测试用例导入 ✅ 所有29条测试用例已导入新表格",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.7496713866911502,
+      "maxScore": 0.8966281641759097,
+      "firstRecalledAt": "2026-04-24T10:20:40.876Z",
+      "lastRecalledAt": "2026-04-24T10:20:59.354Z",
+      "queryHashes": [
+        "540ac543bbfc",
+        "f5941e2300d4"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "permission.member",
+        "permission.setting",
+        "write-only",
+        "requester-open-id",
+        "用户反映没有权限访问/编辑第一个表格",
+        "app-token",
+        "table-id",
+        "工作"
+      ]
+    },
+    "memory:memory/2026-03-30.md:30:67": {
+      "key": "memory:memory/2026-03-30.md:30:67",
+      "path": "memory/2026-03-30.md",
+      "startLine": 30,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "- 接收了 Excel 文件（测试长运指标用例） - 生成了完整的长运测试分析报告（MMSadpLnFoYdVpxkAEUcPbXUn6g） - 包含 20 个完整用例（LR-001~LR-020） - 7大测试分类、监控指标、测试流程 ### 📊 Token 使用情况 - 输入：298k tokens - 输出：9.2k tokens - 总计：307.2k tokens - 成本：$0.0000 - 上下文占用：85k / 128k（66%） ### 📁 生成的文档清单 | 文档 | Token | 链接 | |------|--------|------| | 硬件交互模块测试用例 | 533块 | https://feishu.cn/docx/BYHxdu4oYosboXx1GIwcjTBZnuh | | 沟通过程记录 | 586块 | https://feishu.cn/docx/Pt3SddM87opBzZxQlN1csSD3nrd | | OpenClaw技能库 | 556块 | https://feishu.cn/docx/ChQzdH9oAo0LUaxthAVcSzjFnPh | | 测试长运指标分析 | 374块 | https://feishu.cn/docx/MMSadpLnFoYdVpxkAEUcPbXUn6g | **总计：2049 块文档内容** ### 🔧 系统信息 - 模型：Claude Haiku 4.5 - 运行时：agent=main - 权限：Elevated - 推理：Off ### 💡 关",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8841604185843611,
+      "maxScore": 0.8841604185843611,
+      "firstRecalledAt": "2026-04-24T10:20:45.543Z",
+      "lastRecalledAt": "2026-04-24T10:20:45.543Z",
+      "queryHashes": [
+        "e1d8afd90e91"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "lr-001",
+        "lr-020",
+        "9.2k",
+        "307.2k",
+        "0.0000",
+        "4.5",
+        "接收",
+        "excel"
+      ]
+    },
+    "memory:memory/2026-03-23.md:68:99": {
+      "key": "memory:memory/2026-03-23.md:68:99",
+      "path": "memory/2026-03-23.md",
+      "startLine": 68,
+      "endLine": 99,
+      "source": "memory",
+      "snippet": "- 决定重新创建新表格以确保权限完全正确 ### 新表格创建完成 ✅ **新表格链接**：https://ihqz5dyhwa.feishu.cn/base/IpAtbylrvaJBOBsFSqMcBcaYnpd - app_token: IpAtbylrvaJBOBsFSqMcBcaYnpd - table_id: tblTXGTw5hzGQGh4 ### 完整的测试用例导入 ✅ 所有29条测试用例已导入新表格 ✅ 8个字段完全配置：测试用例ID、所属模块、测试描述、前置条件、测试步骤、预期结果、优先级 ✅ 每条用例包含完整的前置条件、详细步骤、明确的预期结果 ### 权限状态确认 ✅ 用户现在是新表格的**创建者兼所有者** ✅ 拥有**完全的编辑权限**（无任何限制） ✅ 可以**分享给团队成员**（支持多人协作） ✅ 可以**添加新字段、修改内容、删除记录** ### 旧表格对比 - 旧表格：https://ihqz5dyhwa.feishu.cn/base/J6E6b7q1WaTW9gsfmlfcgQr3nmc（31条记录） - 新表格：https://ihqz5dyhwa.feishu.cn/base/IpAtbylrvaJBOBsFSqMcBcaYnpd（29条完整记录+权限正确） ### 建议 - 推荐使用新表格（权限已确认正确） - 旧表格可保留作为备份或存档参考 ## 最终交付完成（15:40 - 15:46） ### 用户个人版表格创建 ✅ **个人版表格链接**：https://ihqz5dyhwa.feishu.cn/base/QF7Vb",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9028937420992053,
+      "maxScore": 0.9028937420992053,
+      "firstRecalledAt": "2026-04-24T10:20:59.354Z",
+      "lastRecalledAt": "2026-04-24T10:20:59.354Z",
+      "queryHashes": [
+        "f5941e2300d4"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "备份",
+        "app-token",
+        "table-id",
+        "ihqz5dyhwa.feishu.cn/base/qf7vb",
+        "决定",
+        "重新",
+        "创建",
+        "表格"
+      ]
+    },
+    "memory:memory/2026-04-25.md:1:25": {
+      "key": "memory:memory/2026-04-25.md:1:25",
+      "path": "memory/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# 2026-04-25 Saturday ## 学习 ONES 项目管理 skill - 用户提供了 `ones-project-management.skill` 包并要求学习 - 已解包并阅读：`SKILL.md` + `references/api-reference.md` - 已掌握该 skill 的核心能力：通过 ONES REST/GraphQL API 进行任务/缺陷/需求读取与创建、评论读写、项目概览卡片读取与更新、用户查询、里程碑查询 ### 关键规则 - 严禁执行删除操作（deleteCard / deleteTask 等） - 修改 dashboard card 前必须先备份原内容 - 登录接口：`POST https://ones.cn/api/project/auth/login` - 后续请求必须带：`Ones-User-Id` + `Ones-Auth-Token` - GraphQL 入口：`POST /api/project/team/{TEAM}/items/graphql` - 创建任务接口：`POST /api/project/team/{TEAM}/tasks/add` - 创建任务时必须同时提供：`issue_type_uuid` + `issue_type_scope_uuid` - `issue_type_scope_uuid` 需从目标项目现有任务中查询，不能想当然复用 - dashboard card 无法可靠通过 API 创建，通常需要用户先在 UI 手动创建 announcement 卡片，再由 agent 更新",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.547047823834504,
+      "maxScore": 0.9022590301868539,
+      "firstRecalledAt": "2026-04-25T09:10:26.965Z",
+      "lastRecalledAt": "2026-05-07T10:29:04.838Z",
+      "queryHashes": [
+        "1a6afddabd1a",
+        "c48dccd0b04f",
+        "4317f1395f46",
+        "2d6bb3eccb84"
+      ],
+      "recallDays": [
+        "2026-04-25",
+        "2026-04-28",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "备份",
+        "ones-project-management.skill",
+        "skill.md",
+        "references/api-reference.md",
+        "rest/graphql",
+        "进行任务/缺陷/需求读取与创建",
+        "ones.cn/api/project/auth/login",
+        "ones-user-id"
+      ]
+    },
+    "memory:memory/2026-04-24.md:19:32": {
+      "key": "memory:memory/2026-04-24.md:19:32",
+      "path": "memory/2026-04-24.md",
+      "startLine": 19,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "- 风险/需求/下周计划是根据缺陷数据推断填的，用户尚未确认是否需要调整 ### 追加缺陷 - 用户要求追加 W1141-195870【HID】设备管理添加HID配对问题（普通级 / 下一版本修复 / 负责人朱常青） - 已作为严重缺陷4插入周报文档，附带 ones 链接 ### 关键信息 - 测试代表：陈梓雄 - 固件版本：V01 - APP版本：V10.46.13 - 当前轮次：第一轮（20260420~0425） - 计划人力：10人日 / 实际：5人日 - 目标完成时间：5.14",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8788699213865203,
+      "maxScore": 0.8788699213865203,
+      "firstRecalledAt": "2026-04-25T09:10:26.965Z",
+      "lastRecalledAt": "2026-04-25T09:10:26.965Z",
+      "queryHashes": [
+        "1a6afddabd1a"
+      ],
+      "recallDays": [
+        "2026-04-25"
+      ],
+      "conceptTags": [
+        "风险/需求/下周计划是根据缺陷数据推断填的",
+        "w1141-195870",
+        "v10.46.13",
+        "5.14",
+        "风险",
+        "需求",
+        "下周",
+        "计划"
+      ]
+    },
+    "memory:memory/2026-04-24.md:1:25": {
+      "key": "memory:memory/2026-04-24.md:1:25",
+      "path": "memory/2026-04-24.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# 2026-04-24 Friday ## AI Hub Show 单品项目测试周报生成 - 用户发了周报模板飞书文档：`https://ihqz5dyhwa.feishu.cn/docx/TV0kdYuecoGKYbxmGTKc66a5nth` - 模板结构已记录到 MEMORY.md（4个板块：项目基本信息表格、进展与缺陷、风险与需求、下周测试计划） - 用户要求以后按这个格式生成周报 ### 缺陷 Excel 数据处理 - 用户上传了 `W1149 AI hub show-缺陷-固件缺陷-全部固件缺陷.xlsx` - 统计结果：有效缺陷40个（最高1/较高2/普通37） - 未解决29 / 待回归10 / 待评审2 - 严重缺陷3个：屏幕蓝屏(最高)、红外发码异常(较高)、Matter显示异常(较高) ### 周报文档生成 - 原文档无编辑权限，在默认文件夹新建了周报文档 - 新文档：`https://feishu.cn/docx/L5uedl4fqoIVOoxzJpZc6LaFnQd`（token: L5uedl4fqoIVOoxzJpZc6LaFnQd） - 已填入：项目基本信息表格 + 缺陷统计 + 严重缺陷列表 + 风险与需求 + 下周计划 - 风险/需求/下周计划是根据缺陷数据推断填的，用户尚未确认是否需要调整 ### 追加缺陷 - 用户要求追加 W1141-195870【HID】设备管理添加HID配对问题（普通级 / 下一版本修复 / 负责人朱常青） - 已作为严重缺陷4插入周报文档，附带 ones 链接 ### 关键信息",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.5195081353805873,
+      "maxScore": 0.881458441870483,
+      "firstRecalledAt": "2026-04-28T06:03:35.524Z",
+      "lastRecalledAt": "2026-04-30T13:35:39.918Z",
+      "queryHashes": [
+        "fc946c96e8c8",
+        "0ef247ed0483",
+        "84df61ebefe4",
+        "ae2831394578"
+      ],
+      "recallDays": [
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "show-缺陷-固件缺陷-全部固件缺陷.xlsx",
+        "最高1/较高2/普通37",
+        "风险/需求/下周计划是根据缺陷数据推断填的",
+        "w1141-195870",
+        "friday",
+        "hub",
+        "show"
+      ]
+    },
+    "memory:memory/2026-03-18.md:31:60": {
+      "key": "memory:memory/2026-03-18.md:31:60",
+      "path": "memory/2026-03-18.md",
+      "startLine": 31,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "- Physical installation compatibility - Notification failures **Key Finding:** Most control failures require firmware update + recalibration ## User Query Resolution - **Issue:** \"Safety alarm 无法控制锁\" (Cannot control lock) - **Related Problems Found:** 1. Lock jamming with motor sounds 2. Calibration errors preventing control 3. Daily operation failures - **Common Solution:** Firmware update → Recalibrate → Replace if hardware issue ## System Actions Taken - Changed gateway restart (failed initially, background process completed) - Doctor tool auto-fixed config structure - Permissions approved for Bitable access ## Document Comparison Task (18:29-18:34 GMT+8) - **Request:** Merge tw",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8555569440947972,
+      "maxScore": 0.8555569440947972,
+      "firstRecalledAt": "2026-04-28T08:15:57.296Z",
+      "lastRecalledAt": "2026-04-28T08:15:57.296Z",
+      "queryHashes": [
+        "e3598abe6d88"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "gateway",
+        "auto-fixed",
+        "29-18",
+        "physical",
+        "installation",
+        "compatibility",
+        "notification",
+        "failures"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "weekly-test-report",
+  "version": "1.0.0",
+  "description": "从 Excel 缺陷数据生成飞书单品项目测试周报",
+  "author": "chenzixiong666-png"
+}

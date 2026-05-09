@@ -1,0 +1,40 @@
+{
+  "title": "产品上市计划",
+  "children": [
+    {
+      "title": "营销策略",
+      "children": [
+        {"title": "社交媒体宣传"},
+        {"title": "新闻稿发布"},
+        {"title": "网红合作"},
+        {"title": "付费广告投放"}
+      ]
+    },
+    {
+      "title": "运营准备",
+      "children": [
+        {"title": "库存管理"},
+        {"title": "客服培训"},
+        {"title": "支付集成"},
+        {"title": "物流配置"}
+      ]
+    },
+    {
+      "title": "技术清单",
+      "children": [
+        {"title": "最终 QA"},
+        {"title": "性能测试"},
+        {"title": "安全审计"},
+        {"title": "上线部署"}
+      ]
+    },
+    {
+      "title": "时间计划",
+      "children": [
+        {"title": "第 1 周：准备"},
+        {"title": "第 2-3 周：营销"},
+        {"title": "第 4 周：上市"}
+      ]
+    }
+  ]
+}

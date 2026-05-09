@@ -1,0 +1,19 @@
+{
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "chrome",
+    "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "tools": {
+    "allow": [
+      "browser"
+    ]
+  },
+  "sandbox": true,
+  "headless": false,
+  "args": [
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--disable-extensions"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "机器学习基础",
+  "children": [
+    {
+      "title": "监督学习",
+      "children": [
+        {"title": "线性回归"},
+        {"title": "逻辑回归"},
+        {"title": "分类问题"},
+        {"title": "神经网络"}
+      ]
+    },
+    {
+      "title": "无监督学习",
+      "children": [
+        {"title": "聚类分析"},
+        {"title": "K-Means"},
+        {"title": "层次聚类"},
+        {"title": "降维处理"}
+      ]
+    },
+    {
+      "title": "强化学习",
+      "children": [
+        {"title": "马尔可夫决策"},
+        {"title": "Q-Learning"},
+        {"title": "策略梯度"},
+        {"title": "深度强化学习"}
+      ]
+    },
+    {
+      "title": "评估指标",
+      "children": [
+        {"title": "准确度"},
+        {"title": "精准率/召回率"},
+        {"title": "F1 分数"},
+        {"title": "混淆矩阵"}
+      ]
+    }
+  ]
+}

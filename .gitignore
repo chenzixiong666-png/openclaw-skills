@@ -1,0 +1,27 @@
+# Secrets & sensitive files
+memory/2026-04-16-figma-token.md
+memory/2026-04-28.md
+tmp_figma_extract.py
+output/logtool_test/
+
+# Build artifacts
+build/
+dist/LogTool.exe
+dist/LogTool_20260428.exe
+__pycache__/
+
+# Large log files
+logs_/
+logs_all/
+*.log
+
+# Temp files
+tmp
+tmp_ones_*.py
+tmp_ones_*.js
+
+# Other
+logtool-repo/
+upload_param.json
+upload_params.json
+.openclaw/
